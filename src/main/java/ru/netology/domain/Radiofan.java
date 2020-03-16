@@ -113,8 +113,6 @@ public class Radiofan {
         }
         if (currentSoundVolume < maxSoundVolume) {
             currentSoundVolume++;
-        } else {
-            currentSoundVolume = minSoundVolume;
         }
     }
 
@@ -124,8 +122,6 @@ public class Radiofan {
         }
         if (currentSoundVolume > minSoundVolume) {
             currentSoundVolume--;
-        } else {
-            currentSoundVolume = maxSoundVolume;
         }
     }
 }
