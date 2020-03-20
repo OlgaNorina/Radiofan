@@ -13,7 +13,7 @@ class RadiofanTest {
         Radiofan radiofan = new Radiofan();
         radiofan.setOn(on);
         radiofan.setCurrentRadioStation(currentRadioStation);
-        radiofan.NextRadioStation();
+        radiofan.nextRadioStation();
 
         assertEquals(expected, radiofan.getCurrentRadioStation());
     }
@@ -24,7 +24,7 @@ class RadiofanTest {
         Radiofan radiofan = new Radiofan();
         radiofan.setOn(on);
         radiofan.setCurrentRadioStation(currentRadioStation);
-        radiofan.PrevRadioStation();
+        radiofan.prevRadioStation();
 
         assertEquals(expected, radiofan.getCurrentRadioStation());
     }
@@ -45,7 +45,7 @@ class RadiofanTest {
         Radiofan radiofan = new Radiofan();
         radiofan.setOn(on);
         radiofan.setCurrentSoundVolume(currentSoundVolume);
-        radiofan.IncreaseSoundVolume();
+        radiofan.increaseSoundVolume();
 
         assertEquals(expected, radiofan.getCurrentSoundVolume());
     }
@@ -56,7 +56,7 @@ class RadiofanTest {
         Radiofan radiofan = new Radiofan();
         radiofan.setOn(on);
         radiofan.setCurrentSoundVolume(currentSoundVolume);
-        radiofan.DecreaseSoundVolume();
+        radiofan.decreaseSoundVolume();
 
         assertEquals(expected, radiofan.getCurrentSoundVolume());
     }

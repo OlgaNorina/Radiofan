@@ -70,7 +70,7 @@ public class Radiofan {
         this.on = on;
     }
 
-    public void NextRadioStation() {
+    public void nextRadioStation() {
         if (!on) {
             return;
         }
@@ -81,7 +81,7 @@ public class Radiofan {
         }
     }
 
-    public void PrevRadioStation() {
+    public void prevRadioStation() {
         if (!on) {
             return;
         }
@@ -107,7 +107,7 @@ public class Radiofan {
         this.currentRadioStation = currentRadioStation;
     }
 
-    public void IncreaseSoundVolume() {
+    public void increaseSoundVolume() {
         if (!on) {
             return;
         }
@@ -116,7 +116,7 @@ public class Radiofan {
         }
     }
 
-    public void DecreaseSoundVolume() {
+    public void decreaseSoundVolume() {
         if (!on) {
             return;
         }
