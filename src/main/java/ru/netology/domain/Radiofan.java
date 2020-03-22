@@ -1,5 +1,12 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Radiofan {
     private String name;
     private int maxRadioStation = 10;
@@ -9,15 +16,6 @@ public class Radiofan {
     private int minSoundVolume;
     private int currentSoundVolume;
     private boolean on;
-
-    public Radiofan(String name, int minRadioStation, int currentRadioStation, int minSoundVolume, int currentSoundVolume, boolean on) {
-        this.name = name;
-        this.minRadioStation = minRadioStation;
-        this.currentRadioStation = currentRadioStation;
-        this.minSoundVolume = minSoundVolume;
-        this.currentSoundVolume = currentSoundVolume;
-        this.on = on;
-    }
 
     public void nextRadioStation() {
         if (!on) {
@@ -72,14 +70,6 @@ public class Radiofan {
         if (currentSoundVolume > minSoundVolume) {
             currentSoundVolume--;
         }
-    }
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    public int getCurrentSoundVolume() {
-        return currentSoundVolume;
     }
 }
 
