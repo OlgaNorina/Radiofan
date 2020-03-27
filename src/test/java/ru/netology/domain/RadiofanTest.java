@@ -45,7 +45,7 @@ class RadiofanTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/dataForDecSV.csv")
     void decreaseSoundVolume(boolean on, int currentSoundVolume, int expected) {
-        Radiofan radiofan = new Radiofan("decSV",0,0,-10,currentSoundVolume,on);
+        Radiofan radiofan = new Radiofan("incSV",0,0,0,currentSoundVolume,on);
         radiofan.decreaseSoundVolume();
 
         assertEquals(expected, radiofan.getCurrentSoundVolume());
