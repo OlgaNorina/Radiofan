@@ -2,71 +2,27 @@ package ru.netology.domain;
 
 public class Radiofan {
     private String name;
-    private int maxRadioStation = 9;
-    private int minRadioStation;
+    private int maxRadioStation = 10;
+    private int minRadioStation = 0;
     private int currentRadioStation;
-    private int maxSoundVolume = 10;
-    private int minSoundVolume;
+    private int maxSoundVolume = 100;
+    private int minSoundVolume = 0;
     private int currentSoundVolume;
     private boolean on;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Radiofan(String name, int currentRadioStation, int currentSoundVolume, boolean on) {
         this.name = name;
-    }
-
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-
-    public void setMaxRadioStation(int maxRadioStation) {
-        this.maxRadioStation = maxRadioStation;
-    }
-
-    public int getMinRadioStation() {
-        return minRadioStation;
-    }
-
-    public void setMinRadioStation(int minRadioStation) {
-        this.minRadioStation = minRadioStation;
-    }
-
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    public int getMaxSoundVolume() {
-        return maxSoundVolume;
-    }
-
-    public void setMaxSoundVolume(int maxSoundVolume) {
-        this.maxSoundVolume = maxSoundVolume;
-    }
-
-    public int getMinSoundVolume() {
-        return minSoundVolume;
-    }
-
-    public void setMinSoundVolume(int minSoundVolume) {
-        this.minSoundVolume = minSoundVolume;
-    }
-
-    public int getCurrentSoundVolume() {
-        return currentSoundVolume;
-    }
-
-    public void setCurrentSoundVolume(int currentSoundVolume) {
+        this.currentRadioStation = currentRadioStation;
         this.currentSoundVolume = currentSoundVolume;
+        this.on = on;
     }
 
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
+   public Radiofan(String name, int maxRadioStation, int currentRadioStation, int maxSoundVolume, int currentSoundVolume, boolean on) {
+        this.name = name;
+        this.maxRadioStation = maxRadioStation;
+        this.currentRadioStation = currentRadioStation;
+        this.maxSoundVolume = maxSoundVolume;
+        this.currentSoundVolume = currentSoundVolume;
         this.on = on;
     }
 
@@ -123,6 +79,14 @@ public class Radiofan {
         if (currentSoundVolume > minSoundVolume) {
             currentSoundVolume--;
         }
+    }
+
+    public int getCurrentRadioStation() {
+        return currentRadioStation;
+    }
+
+    public int getCurrentSoundVolume() {
+        return currentSoundVolume;
     }
 }
 
