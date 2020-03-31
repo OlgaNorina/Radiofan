@@ -3,18 +3,25 @@ package ru.netology.domain;
 public class Radiofan {
     private String name;
     private int maxRadioStation = 10;
-    private int minRadioStation;
+    private int minRadioStation = 0;
     private int currentRadioStation;
     private int maxSoundVolume = 100;
-    private int minSoundVolume;
+    private int minSoundVolume = 0;
     private int currentSoundVolume;
     private boolean on;
 
-    public Radiofan(String name, int minRadioStation, int currentRadioStation, int minSoundVolume, int currentSoundVolume, boolean on) {
+    public Radiofan(String name, int currentRadioStation, int currentSoundVolume, boolean on) {
         this.name = name;
-        this.minRadioStation = minRadioStation;
         this.currentRadioStation = currentRadioStation;
-        this.minSoundVolume = minSoundVolume;
+        this.currentSoundVolume = currentSoundVolume;
+        this.on = on;
+    }
+
+   public Radiofan(String name, int maxRadioStation, int currentRadioStation, int maxSoundVolume, int currentSoundVolume, boolean on) {
+        this.name = name;
+        this.maxRadioStation = maxRadioStation;
+        this.currentRadioStation = currentRadioStation;
+        this.maxSoundVolume = maxSoundVolume;
         this.currentSoundVolume = currentSoundVolume;
         this.on = on;
     }
